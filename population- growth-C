@@ -1,0 +1,30 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    long start;
+    do
+    {
+      start = get_long("Starting population: ");
+    }
+    while (start < 9);
+
+    long end;
+    do
+    {
+        end = get_long("End Population: ");
+    }
+    while (end <= start);
+
+    long year = 0;
+    do
+    {
+        start = start + (start/3) - (start/4);
+        year++;
+    }
+    while (start < end);
+
+    printf("Total years: %li\n", year);
+
+}
