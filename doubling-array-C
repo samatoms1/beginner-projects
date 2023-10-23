@@ -1,0 +1,24 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int N;
+    do
+    {
+        N = get_int("Array Size: ");
+    }
+    while (N < 1);
+
+    int squared[N];
+    squared[0] = 1;
+    printf("%i\n", squared[0]);
+    for (int i = 1; i < N; i++)
+    {
+        squared[i] = 2 * squared[i-1];
+        printf("%i\n", squared[i]);
+
+    }
+
+
+}
